@@ -1,0 +1,35 @@
+﻿/////    TYPOGRAPHY     /////
+
+@include font-face("Font Face", font-files("/build/fonts/font.woff", woff, "/build/fonts/font.svg", svg), "/build/fonts/font.eot", 400, normal);
+
+
+//
+// BASE STYLES
+//
+
+html, body {
+	background: $white;
+	color: $black;
+	font-family: $primary-font;
+	font-size: $base-font-size;
+	height: 100%;
+	line-height: $base-line-height;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	}
+
+main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $secondary-font;
+}
+
+a {
+	color: $blue;
+
+	&:hover {
+	}
+}

@@ -1,0 +1,16 @@
+.env
+node_modules/
+build/
+.DS_Store
+.zip
+.rar
+~
+.lock
+.swp
+.out
+.idea
+.sass-cache/
+tmp/
+temp/
+cache/
+simple-backup/

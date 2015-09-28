@@ -1,0 +1,35 @@
+//
+// Header Styles
+//
+
+// Default Styles
+[role=banner] {
+	h1 {}
+
+	[type=checkbox] {
+		display: none;
+
+		// menu toggle element
+		&~label {
+			color: red;
+		}
+
+		// hide nav if not checked
+		&~nav {
+			display: none;
+		}
+
+		&:checked {
+
+			// active label style
+			&~label {
+				color: blue;
+			}
+
+			// active nav style
+			&~nav {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+[role="document"] {
+	display: flex;
+	justify-content: space-between;
+	
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	aside {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}

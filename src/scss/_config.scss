@@ -1,0 +1,33 @@
+/////     GLOBAL DEFAULTS     /////
+
+$base-font-size : 16px;
+$base-line-height : 24px;
+
+
+/////     GRID     /////
+
+// responsive breakpoints
+
+$breakpoints : (
+	mobile 4, 			// 320
+	mobile-wide 6, 		// 480
+	tablet 8, 			// 640
+	desktop 12, 		// 960
+	desktop-wide 16, 	// 1280
+	desktop-hd 18		// 1440
+);
+
+// Column Measurements
+$grid-column-width 	: 5rem; // this makes the desktop 960px exactly
+$grid-gutter		: 0rem;
+$grid-padding		: 0;
+$grid-type			: magic; // fluid or magic
+
+/////     Fonts     /////
+$primary-font: serif;
+$secondary-font: sans-serif;
+
+/////     Colour     /////
+$black : #000000;
+$white : #FFFFFF;
+$blue : #0000FF;

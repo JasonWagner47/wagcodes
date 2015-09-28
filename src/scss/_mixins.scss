@@ -1,0 +1,30 @@
+﻿/////     MIXINS     /////
+
+// Vertical align anything (works in IE9+) (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+
+// Usage: @include vertical-align-parent;
+@mixin vertical-align-parent {
+	@include transform-style(preserve-3d);
+}
+
+// Usage: @include vertical-align;
+@mixin vertical-align {
+	@include transform(translateY(-50%));
+	position: relative;
+	top: 50%;
+}
+
+// Truncate long strings of text with an ellipsis
+//
+// Usage: supply a width as paramter:
+// ex: @include truncate-ellipsis(8rem);
+// ex: @include truncate-ellipsis(100%);
+//
+// Note: this element must be a block element 
+// ex: (display: inline-block || display: block)
+@mixin truncate-ellipsis($width) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: $width;
+	white-space: nowrap;
+}
