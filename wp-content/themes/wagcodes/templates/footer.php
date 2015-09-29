@@ -6,5 +6,5 @@
 	</footer>
 	
 	<?php wp_footer(); ?>
-	<script src="<?php echo get_template_directory_uri(); ?>/_/bower_components/requirejs/require.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/_/assets/js/main.min.js"></script>
+	<script src="/wp-content/themes/wagcodes/_/build/js/vendor/require.js"></script>
+	<script src="/wp-content/themes/wagcodes/_/build/js/application/main.js"></script>

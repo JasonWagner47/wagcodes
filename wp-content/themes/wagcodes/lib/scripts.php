@@ -1,7 +1,7 @@
 <?php
 function SM_scripts() {
 	// load Stylesheet
-	wp_enqueue_style('SM_main', get_template_directory_uri() . '/_/assets/css/main.css', false);
+	wp_enqueue_style('SM_main', '/wp-content/themes/wagcodes/_/build/css/main.css', false); 
 
 	// deregester WP jQuery
 	wp_deregister_script('jquery');
