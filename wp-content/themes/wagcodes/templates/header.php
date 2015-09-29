@@ -1,25 +1,23 @@
 	<header role="banner">
-		<h1>
-			<a href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
-		</h1>
-	
-		<label class="menu_toggle" for="menu_toggle">☰</label>
-		<input type="checkbox" id="menu_toggle" />
-	
-		<nav role="navigation">
-			<?php
-			if (has_nav_menu('primary_navigation')) :
-				$menu = wp_nav_menu(array(
-					'theme_location'	=> 'primary_navigation',
-					'container'			=> FALSE,
-					'container_id'		=> FALSE,
-					'menu_class'		=> '',
-					'menu_id'			=> FALSE,
-					'items_wrap'		=> '%3$s',
-					'echo'				=> FALSE
-				));
-				echo str_replace( array('li', 'ul'), array('div', 'div'), $menu );
-			endif;
-			?>
+
+		<nav>
+			<a href="mailto:wagcodes@gmail.com?subject=Let's Create a Website"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-email.svg'; ?></a>
+			<a href="https://www.linkedin.com/pub/jason-wagner/b/408/641" target="_blank"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-linkedin.svg'; ?></a>
 		</nav>
+		
+		<div>
+			<h1>Jason </br>Wagner</h1>
+			<p>I'm a Web Developer specializing in Wordpress, Laravel, PHP, JavaScript and CSS. When I'm not in front of a computer, you can find me in the woods, practicing yoga, playing music, or hanging with my dog Bufford. </p>
+			
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?>
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-hat.svg'; ?>
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-tree.svg'; ?>
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-heart.svg'; ?>
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-guitar.svg'; ?>
+			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-paw.svg'; ?>
+		</div>
+
+		<a href="#"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-down.svg'; ?>Scroll to see the goods</a>
+
+
 	</header>
