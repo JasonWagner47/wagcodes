@@ -7,14 +7,14 @@
 
 		<div>
 			<h1>Jason </br>Wagner</h1>
-			<p>I'm a Web Developer specializing in Wordpress, Laravel, PHP, JavaScript and CSS. When I'm not in front of a computer, you can find me in the woods, practicing yoga, playing music, or hanging with my dog Bufford. </p>
+			<p id="bio">I'm a Web Developer specializing in <span data-term="code">Wordpress, Laravel, PHP, JavaScript and CSS</span>. When I'm not in front of a computer, you can find me in the <span data-term="nature">woods</span>, practicing <span data-term="yoga">yoga</span>, <span data-term="music">playing music</span>, or hanging with my dog <span data-term="bufford">Bufford</span>. </p>
 			
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?>
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-hat.svg'; ?>
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-tree.svg'; ?>
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-heart.svg'; ?>
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-guitar.svg'; ?>
-			<?php include get_theme_root() . '/wagcodes/_/build/svg/icon-paw.svg'; ?>
+
+			<span data-term="code" class="icon"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?></span>
+			<span data-term="nature"class="icon" ><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-tree.svg'; ?></span>
+			<span data-term="yoga" class="icon"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-heart.svg'; ?></span>
+			<span data-term="music" class="icon"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-guitar.svg'; ?></span>
+			<span data-term="bufford" class="icon"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-paw.svg'; ?></span>
 		</div>
 
 		<a href="#portfolio" id="jump-portfolio"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-down.svg'; ?>Scroll to see the goods</a>
