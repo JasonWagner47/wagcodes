@@ -1,6 +1,6 @@
 	<header role="banner">
 
-		<nav>
+		<nav id="fixed-nav">
 			<a href="mailto:wagcodes@gmail.com?subject=Let's Create a Website"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-email.svg'; ?></a>
 			<a href="https://www.linkedin.com/pub/jason-wagner/b/408/641" target="_blank"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-linkedin.svg'; ?></a>
 		</nav>
@@ -24,7 +24,7 @@
 
 		</div>
 
-		<a href="#portfolio" id="jump-portfolio"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-down.svg'; ?>Scroll to see the goods</a>
+		<a href="#" id="jump-portfolio"><?php include get_theme_root() . '/wagcodes/_/build/svg/icon-down.svg'; ?>Scroll to see the goods</a>
 
 
 	</header>
