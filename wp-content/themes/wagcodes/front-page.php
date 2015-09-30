@@ -10,6 +10,7 @@
 					$description = get_sub_field('description');
 					$url = get_sub_field('url');
 					$image = get_sub_field('image');
+					$languages = get_sub_field('languages');
 				?>
 
 			<div 
@@ -19,17 +20,25 @@
 					<h2><?php echo $title;?></h2>
 				<?php endif;?>
 
+				<img src ="<?php echo $image;?>" alt="<?php echo $title;?>"/>
+
+
+					<?php if($languages):?>
+								<span class="languages"> <?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?><?php echo $languages;?></span>
+							<?php endif;?>
+
+							
 				<?php if($description):?>
-					<p><?php echo $description;?></p>
-				<?php endif;?>
+					<p class="copy"><?php echo $description;?>
+						<span class="portfolio-cta">
+							<?php if($url):?>
+								<a href="<?php echo $url;?>">Visit the Site</a>
+							<?php endif;?>
+						</span>
+					</p>
 
-				<?php if($url):?>
-					<a href="<?php echo $url;?>">Visit the Site</a>
-				<?php endif;?>
-
-				<img src ="<?php echo $image;?>"/>
-
-
+				
+					<?php endif;?>
 
 			</div>
 		<?php endwhile; ?>
