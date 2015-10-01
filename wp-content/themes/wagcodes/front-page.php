@@ -13,8 +13,7 @@
 					$languages = get_sub_field('languages');
 				?>
 
-			<div 
->
+			<div class="work">
 				
 				<?php if($title):?>
 					<h2><?php echo $title;?></h2>
@@ -23,22 +22,19 @@
 				<img src ="<?php echo $image;?>" alt="<?php echo $title;?>"/>
 
 
-					<?php if($languages):?>
-								<span class="languages"> <?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?><?php echo $languages;?></span>
-							<?php endif;?>
+				<?php if($languages):?>
+						<span class="languages"> <?php include get_theme_root() . '/wagcodes/_/build/svg/icon-computer.svg'; ?><?php echo $languages;?></span>
+				<?php endif;?>
 
-							
-				<?php if($description):?>
-					<p class="copy"><?php echo $description;?>
-						<span class="portfolio-cta">
-							<?php if($url):?>
-								<a href="<?php echo $url;?>">Visit the Site</a>
-							<?php endif;?>
-						</span>
-					</p>
-
-				
+				<div class="about-wrapper">
+					<?php if($description):?>
+						<p class="copy"><?php echo $description;?></p>
 					<?php endif;?>
+
+					<?php if($url):?>
+						<a href="<?php echo $url;?>" class="portfolio-cta">Visit the Site</a>
+					<?php endif;?>
+				</div>
 
 			</div>
 		<?php endwhile; ?>
