@@ -1,0 +1,12 @@
+﻿/////     REUSABLE, MODULAR COMPONENTS     /////
+
+// global <header role="banner">
+@import 'modules/global/header';
+
+// global <main role="document">
+@import 'modules/global/main';
+
+// global <footer role="contentInfo">
+@import 'modules/global/footer';
+
+@import 'modules/global/portfolio';

@@ -1,0 +1,64 @@
+﻿/////     MIXINS     /////
+
+@mixin jumbo_text {
+	margin:0;
+
+	@include breakpoint(tablet){
+		font-size: $medium;
+	}
+
+	@include breakpoint(desktop){
+		font-size: $large;
+	}
+
+	@include breakpoint(desktop-wide){
+		font-size: $jumbo;
+	}
+
+}
+
+@mixin section_padding {
+	padding: 0 $gutter-mobile;
+
+	@include breakpoint(tablet){
+		padding: $gutter-tablet;
+	}
+}
+
+@mixin ghosty {
+	border: 1px solid $white;
+	color: $white;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+// Vertical align anything (works in IE9+) (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+
+// Usage: @include vertical-align-parent;
+@mixin vertical-align-parent {
+	@include transform-style(preserve-3d);
+}
+
+// Usage: @include vertical-align;
+@mixin vertical-align {
+	@include transform(translateY(-50%));
+	position: relative;
+	top: 50%;
+}
+
+// Truncate long strings of text with an ellipsis
+//
+// Usage: supply a width as paramter:
+// ex: @include truncate-ellipsis(8rem);
+// ex: @include truncate-ellipsis(100%);
+//
+// Note: this element must be a block element 
+// ex: (display: inline-block || display: block)
+@mixin truncate-ellipsis($width) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: $width;
+	white-space: nowrap;
+}

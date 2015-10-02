@@ -1,0 +1,14 @@
+{
+	"name": "Project-Starter",
+	"version": "0.0.1",
+	"authors": [
+		"Killian Grant"
+	],
+	"description": "Front-End Project Starter",
+	"dependencies": {
+		"backbone": "*",
+		"jquery": "*",
+		"underscore": "*",
+		"requirejs": "*"
+	}
+}

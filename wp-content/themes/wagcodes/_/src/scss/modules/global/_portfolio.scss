@@ -1,0 +1,81 @@
+#portfolio {
+	color: $white;
+	width:100%;
+
+	img {
+		width:100%;
+	}
+
+	.copy {
+		font-family: $sans-light;
+		position: relative;
+		margin: 2rem 0;
+
+		@include breakpoint(desktop) {
+			font-size: 1rem;
+			padding: 0 20rem 0 0;
+		}
+	}
+
+	.portfolio-cta {
+		@include breakpoint(desktop) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	a {
+		@include ghosty();
+		display: block;
+		margin-bottom: 2rem;
+
+		@include breakpoint(desktop) {
+			margin-top: 0;
+		}
+	}
+
+	.work {
+		@include section_padding();
+		@include clearfix();
+
+		h2 {
+			color: $white;
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 2rem 0;
+
+			@include breakpoint(tablet){
+				font-size: 2.5rem;
+			}
+		}
+
+		&:nth-child(even){
+			background-color: $light-gray;
+		}
+
+		&:nth-child(odd){
+			background-color: $charcoal;
+		}
+	}
+
+}
+.about-wrapper {
+	position: relative;
+}
+
+.languages {
+	font-family: $sans-light;
+	font-size: $small;
+	display: block;
+	margin-top: 2rem;
+	position: relative;
+	padding-left: 55px;
+
+	svg {
+		display: block;
+		left:0;
+		position: absolute;
+		top: -11px;
+	}
+}

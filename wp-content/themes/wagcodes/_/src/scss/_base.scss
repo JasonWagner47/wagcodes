@@ -1,0 +1,57 @@
+﻿///// FONTS /////
+@include font-face("Montserrat Bold", font-files("../../build/fonts/Montserrat-Bold.woff", woff), "../../build/fonts/Montserrat-Bold.woff", 700, normal);
+@include font-face("Montserrat Regular", font-files("../../build/fonts/Montserrat-Regular.woff", woff), "../../build/fonts/Montserrat-Regular.woff", 400, normal);
+@include font-face("Montserrat Light", font-files("../../build/fonts/Montserrat-Light.woff", woff), "../../build/fonts/Montserrat-Light.woff", 400, normal);
+
+$sans-bold: 'Montserrat Bold', sans;
+$sans-light: 'Montserrat Light', sans;
+$sans: 'Montserrat Regular', sans;
+
+
+
+html, body {
+	margin-top: 0!important;
+	color: #464646;
+	font-family: $sans;
+	font-size: $base-font-size;
+	height: 100%;
+	line-height: $base-line-height;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+}
+
+//Fadin in the website;
+body {
+	opacity: 0;
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
+
+	&.visible {
+		@include transition-property(opacity);
+		@include transition-duration(.5s);
+		opacity: 1;
+	}
+}
+
+main {
+	display: block;
+}
+
+h1, h2, h4, h5 {
+	font-family: $sans-bold;
+}
+
+h3, p{
+	
+}
+
+h1.jumbo {
+	@include jumbo_text();
+}
+
+a {
+	color: $white;
+
+	&:hover {
+	}
+}
