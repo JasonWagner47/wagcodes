@@ -128,7 +128,7 @@
 
 
 .activity-highlight {
-	@include transition(all 0.5s ease-in-out);
+	@include transition(all 0.25s ease-in-out);
 	background-color: rgba(0,0,0,0.5);
 	display:inline-block;
 	padding: 0.25rem;

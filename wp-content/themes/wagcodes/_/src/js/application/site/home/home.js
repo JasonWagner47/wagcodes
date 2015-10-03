@@ -25,14 +25,23 @@ define([] , function () {
 		current_activity : function(e){
 			e.stopPropagation();
 			var icon =$(e.target).closest('.icon'),
+				_this = this;
 				term = $(icon).attr('data-term');
 			
 			$('#bio span').removeClass('activity-highlight');
 			$('.icon').removeClass('icon-highlight');
 			$('.more').hide();
-			$(icon).addClass('icon-highlight');
-			$('#bio span[data-term="' + term + '"]').addClass('activity-highlight');
-			$('.more[data-term="' + term + '"]').show();
+
+
+
+	
+				$(icon).addClass('icon-highlight');
+				$('#bio span[data-term="' + term + '"]').addClass('activity-highlight');
+				$('.more[data-term="' + term + '"]').fadeIn();
+		
+			
+
+
 		},
 
 		hide_activity: function(e){
@@ -68,6 +77,7 @@ define([] , function () {
 		},
 
 		init_objects: function() {
+			console.log('here');
 			var _this = this;
 			$('body').addClass('visible');
 			
