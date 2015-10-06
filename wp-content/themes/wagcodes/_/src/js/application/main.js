@@ -6,10 +6,9 @@ var wp = '/wp-content/themes/wagcodes',
 require.config({
 	paths: {
 		// dependencies
-		backbone: vendor + 'backbone',
 		jquery: vendor + 'jquery',
 		page: vendor + 'page',
-		underscore: vendor + 'underscore',
+		angular: vendor + 'angular',
 
 		// globals
 		select_styler: application + 'global/select_styler',
@@ -20,26 +19,18 @@ require.config({
 		// application
 		home: application + 'site/home/home'
 	},
+
 	shim: {
-		'backbone': {
-			deps: ['underscore', 'jquery'],
-			exports: 'Backbone'
-		},
 		'jquery': {
 			exports: '$'
-		},
-		'underscore': {
-			exports: '_'
 		}
 	}
 });
 
-require(['jquery', 'backbone', 'underscore', 'router'], function($, Backbone, _, Router) {
+require(['jquery', 'angular', 'router'], function($, Angular, Router) {
 	"use strict";
 
-	window.Backbone = Backbone;
 	window.$ = $;
-	window._ = _;
 	window.router = new Router();
 	window.router.init();
 });

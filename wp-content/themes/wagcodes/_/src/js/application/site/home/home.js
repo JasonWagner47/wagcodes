@@ -1,9 +1,14 @@
 define([] , function () {
-	return Backbone.View.extend({
-		el: 'body',
+	var Portfolio = function(){
+		var app = angular.module('myPortfolio', []);
 
-		//auto height the factoid
-		auto_height_factiod : function(e){
+		app.controller('tabs', function($scope) {
+				$scope.greeting = 'Welcome!';
+		});
+
+		angular.bootstrap(document, ['myPortfolio']);
+
+		auto_height_factiod = function(e){
 			$('.more').css({
 				height: 'auto'
 			});
@@ -22,7 +27,7 @@ define([] , function () {
 
 		},
 
-		current_activity : function(e){
+		current_activity = function(e){
 			e.stopPropagation();
 			var icon =$(e.target).closest('.icon'),
 				_this = this;
@@ -31,31 +36,24 @@ define([] , function () {
 			$('#bio span').removeClass('activity-highlight');
 			$('.icon').removeClass('icon-highlight');
 			$('.more').hide();
-
-
-
-	
-				$(icon).addClass('icon-highlight');
-				$('#bio span[data-term="' + term + '"]').addClass('activity-highlight');
-				$('.more[data-term="' + term + '"]').fadeIn();
-		
-			
-
+			$(icon).addClass('icon-highlight');
+			$('#bio span[data-term="' + term + '"]').addClass('activity-highlight');
+			$('.more[data-term="' + term + '"]').fadeIn();
 
 		},
 
-		hide_activity: function(e){
+		hide_activity = function(e){
 			$('.more').hide();
 			$('#bio span').removeClass('activity-highlight');
 			$('.icon').removeClass('icon-highlight');
 		},
 
-		scroll_to_portfolio: function(e){
+		scroll_to_portfolio = function(e){
 			e.preventDefault();
 			$("html, body").animate({ scrollTop: $('#portfolio').offset().top }, 1000);
 		},
 
-		fixed_nav : function(){
+		fixed_nav = function(){
 			var top = $('#portfolio').offset().top;
 			var top_adj = top - 60;
 			var st = $(window).scrollTop();
@@ -68,35 +66,22 @@ define([] , function () {
 
 		},
 
-
-		events: {
-			"click span " : "current_activity",
-			"touchend span":  "current_activity",
-			"click": "hide_activity",
-			"click a#jump-portfolio": "scroll_to_portfolio"
-		},
-
-		init_objects: function() {
-			console.log('here');
-			var _this = this;
+		init_objects = function() {
 			$('body').addClass('visible');
-			
-			_this.auto_height_factiod();
+			auto_height_factiod();
 		},
 
-		init_listeners: function() {
-			var _this = this;
-
+		init_listeners = function() {
 			$(window).on('scroll', function(e) {
-				_this.fixed_nav(e);
+				fixed_nav(e);
 			});
-		},
+		};
 
-		initialize : function() {
-			this.init_listeners();
-			this.init_objects();
-		}
+		this.init = function () {
+			init_objects();
+			init_listeners();
+		};
+	};
 
-	});
-
+	return Portfolio;
 });

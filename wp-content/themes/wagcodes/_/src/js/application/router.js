@@ -7,7 +7,8 @@ define(['page'], function () {
 		// ADD ROUTE FUNCTIONS HERE
 		var home = function() {
 			require(['home'], function(Home) {
-				var hHome = new Home();
+				var home = new Home();
+				home.init();
 			});
 		},
 
